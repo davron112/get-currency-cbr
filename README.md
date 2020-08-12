@@ -10,3 +10,4 @@ Consol command for update currencies rate:
 ```
 php artisan currency:sync
 ```
+All currency rates are automatically updated every day
