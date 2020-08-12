@@ -76,7 +76,7 @@ class CurrencyService  extends BaseService implements CurrencyServiceInterface
 
 
                 $separator = strlen(preg_replace('#\d+,#', '', $rate->Value));
-                $rateValue = (int) preg_replace('#,|.|\s#', '', $rate->Value);
+                $rateValue = (int) preg_replace('#,|\.|\s#', '', $rate->Value);
 
                 $currency = $this->repository->updateOrCreate(
                     [
