@@ -24,7 +24,7 @@ class CurrencyTransformer extends TransformerAbstract
         return [
             'id'    => (int) $model->id,
             'name'  => $model->name,
-            'rate'  => $model->rate,
+            'rate'  => number_format($model->rate, $model->separator, ',', ' '),
         ];
     }
 }
