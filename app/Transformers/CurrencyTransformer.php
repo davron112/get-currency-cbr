@@ -25,6 +25,7 @@ class CurrencyTransformer extends TransformerAbstract
             'id'    => (int) $model->id,
             'name'  => $model->name,
             'rate'  => number_format($model->rate, $model->separator, ',', ' '),
+            'updatedDate' => $model->updated_at
         ];
     }
 }
