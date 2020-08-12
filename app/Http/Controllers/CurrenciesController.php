@@ -26,9 +26,10 @@ class CurrenciesController extends Controller
         return response()->json($currencies);
     }
 
-    public function show($id)
+    public function show($id, CurrencyRepository $repository)
     {
-        $currency = Currency::find($id);
+        $currency = $repository
+            ->setPresenter(CurrencyPresenter::class)->find($id);
         return response()->json($currency);
     }
 }

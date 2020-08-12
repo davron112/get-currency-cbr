@@ -80,7 +80,7 @@ class CurrencyService  extends BaseService implements CurrencyServiceInterface
 
                 $currency = $this->repository->updateOrCreate(
                     [
-                        'name'      => $rateValue,
+                        'name'      => $rate->Name,
                     ],
                     [
                         'rate'      => $rateValue,
